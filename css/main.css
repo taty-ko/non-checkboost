@@ -1,0 +1,191 @@
+html {
+	font-family: "Arial", "Helvetica Neue", "Helvetica", sans-serif; /* 1 */
+	-ms-text-size-adjust: 100%; /* 2 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+	margin: 0;
+}
+
+a {
+	background-color: transparent;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+	text-decoration: none;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -.5em;
+}
+
+sub {
+	bottom: -.25em;
+}
+
+/* .ellipsis {
+	white-space: nowrap; 
+	text-overflow: ellipsis; 
+	overflow: hidden;
+} */
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+* {
+	max-height: 1000000px;
+}
+
+body {
+	color: #000;
+	background: #fff;
+	font: 16px/1.2 "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: top;
+	display: inline-block;
+}
+
+p {
+	margin: 0 0 1em;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+.wrapper {
+	width: 428px;
+	height: 320px;
+	display: inline-block;
+	margin: 0;
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #000;
+}
+
+.cover {
+	background: url(/images/bg-1.jpg);
+	min-width: 910px;
+	height: 320px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation-name: cover;
+	animation-duration: 3s;
+	animation-timing-function: lineiar;
+	animation-iteration-count: 1;
+	animation-delay: 2s;
+	-webkit-animation-name: cover;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-timing-function: lineiar;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-delay: 2s;
+}
+
+@keyframes cover {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	50% {
+		transform: translate(-220px, 0);
+	}
+	
+	100% {
+		transform: translate(-320px, 0);
+	}
+} 
+	
+.container {
+	position: absolute;
+	width: 100%;
+	height: 290px;
+	top: 15px;
+	left: 0;
+	margin-left: 15px;
+	animation-name: moveLeft;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	-webkit-animation-name: moveLeft;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+}
+
+@keyframes moveLeft{
+	0% {
+		transform:translateX(300px);
+	}
+	90% {
+		transform: translateX(-10px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+.energy {
+	position: absolute;
+	width: 180px;
+	height: 110px;
+	top: 90px;
+	left: 207px;
+	animation-name: moveEnergy;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	-webkit-animation-name: moveEnergy;
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-timing-function: ease-in-out;
+}
+
+@keyframes moveEnergy {
+	0% {
+		transform:translateX(200px);
+	}
+	70% {
+		transform: translateX(-10px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+.logo {
+	position: fixed;
+	width: 70px;
+	height: 70px;
+	top: 245px;
+	left: 325px;
+}
+
