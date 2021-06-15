@@ -227,6 +227,7 @@ a {
 	height: 70px;
 	top: 245px;
 	left: 280px;
+	z-index: 1;
 	animation-name: logo;
 	animation-duration: 1s;
 	animation-timing-function: linear;
