@@ -40,12 +40,6 @@ sub {
 	bottom: -.25em;
 }
 
-/* .ellipsis {
-	white-space: nowrap; 
-	text-overflow: ellipsis; 
-	overflow: hidden;
-} */
-
 html {
 	box-sizing: border-box;
 }
@@ -232,13 +226,17 @@ a {
 	width: 70px;
 	height: 70px;
 	top: 245px;
-	left: 280px;}
-	/* animation-name: logo;
+	left: 280px;
+	animation-name: logo;
 	animation-duration: 1s;
 	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-delay: 2s;
 	-webkit-animation-name: logo;
 	-webkit-animation-duration: 1s;
 	-webkit-animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: 2s;
 }
 
 @keyframes logo {
@@ -246,7 +244,7 @@ a {
 		transform:translateX(0px);
 	}
 	100% {
-		transform:translateX(0px);
+		transform:translateX(-240px);
 	}
 }
 @-webkit-keyframes logo {
@@ -254,9 +252,9 @@ a {
 		transform:translateX(0px);
 	}
 	100% {
-		transform:translateX(0px);
+		transform:translateX(-240px);
 	}
-} */
+}
 
 .urban {
 	position: absolute;
@@ -325,6 +323,7 @@ a {
 		transform:translateX(0px);
 	}
 }
+
 @-webkit-keyframes moveNew {
 	0% {
 		transform:translateX(430px);
