@@ -104,21 +104,15 @@ a {
 	animation-duration: 5s;
 	animation-timing-function: linear;
 	animation-delay: 1s;
-	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
-	-webkit-animation: cover 5s linear 1s 3 forwards;
+	-webkit-animation: cover 5s linear 1s forwards;
 
 }
 
 @keyframes cover {
-	0%, 40% {
+	0% {
 		transform: translate(0, 0);
-	}
-
-	 60% {
-		transform: translate(-200px, 0);
 	} 
-	
 	100% {
 		transform: translate(-220px, 0);
 	}
@@ -132,26 +126,7 @@ a {
 	left: 0;
 	margin-left: 15px;
 }
-	/* animation-name: moveLeft;
-	animation-duration: 5s;
-	animation-timing-function: linear;
-	animation-delay: 1s;
-	animation-iteration-count: 1;
-	-webkit-animation: moveLeft 5s linear 1s;
-}
 
-@keyframes moveLeft {
-	0% {
-		transform:translateX(0px);
-	}
-	50% {
-		transform: translateX(-200px);
-	}
-	100% {
-		transform: translateX(-420px);
-	}
-}
- */
 .energy {
 	position: absolute;
 	width: 180px;
@@ -159,12 +134,11 @@ a {
 	top: 90px;
 	left: 207px;
 	animation-name: moveEnergy;
-	animation-duration: 1s;
+	animation-duration: 2s;
 	animation-timing-function: ease-in;
 	animation-iteration-count: 1;
-
 	-webkit-animation-name: moveEnergy;
-	-webkit-animation-duration: 1s;
+	-webkit-animation-duration: 2s;
 	-webkit-animation-timing-function: ease-in;
 	-webkit-animation-delay: 0.1s;
 }
@@ -173,22 +147,24 @@ a {
 	0% {
 		transform:translateX(320px);
 	}
-	75% {
+	45% {
 		transform:translateX(-10px);
 	}
-	
-	100% {
+	75%{
 		transform:translateX(0px);
+	}
+	100% {
+		transform:translateX(-420px);
 	}
 }
 
 .run {
 	animation-name: run;
-	animation-duration: 1s;
+	animation-duration: 2s;
 	animation-timing-function: linear;
 	animation-iteration-count: 1;
 	-webkit-animation-name: run;
-	-webkit-animation-duration: 1s;
+	-webkit-animation-duration: 2s;
 	-webkit-animation-timing-function: linear;
 }
 
@@ -196,12 +172,14 @@ a {
 	0% {
 		transform:translateX(300px);
 	}
-	75% {
+	45% {
 		transform:translateX(0px);
 	}
-	
-	100% {
+	75%{
 		transform:translateX(0px);
+	}
+	100% {
+		transform:translateX(-420px);
 	}
 }
  
@@ -210,7 +188,23 @@ a {
 	width: 70px;
 	height: 70px;
 	top: 245px;
-	left: 325px;
+	left: 280px;
+	animation-name: logo;
+	/* animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+	-webkit-animation-name: logo;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear; */
+}
+
+@keyframes logo {
+	0% {
+		transform:translateX(0px);
+	}
+	100% {
+		transform:translateX(0px);
+	}
 }
 
 .urban {
@@ -221,11 +215,11 @@ a {
 	animation-duration: 0.5s;
 	animation-timing-function: linear;
 	animation-iteration-count: 1;
-	animation-delay: 2.4s;
+	animation-delay: 2.5s;
 	-webkit-animation-name: moveUrban;
 	-webkit-animation-duration: 0.5s;
 	-webkit-animation-timing-function: linear;
-	-webkit-animation-delay: 2.4s;
+	-webkit-animation-delay: 2.5s;
 }
 
 @keyframes moveUrban {
@@ -264,7 +258,6 @@ a {
 	75% {
 		transform:translateX(-10px);
 	}
-	
 	100% {
 		transform:translateX(0px);
 	}
@@ -310,11 +303,11 @@ span .btn {
 	animation-duration: 1s;
 	animation-timing-function: ease-in;
 	animation-iteration-count: 1;
-	animation-delay: 2.5s;
+	animation-delay: 2.6s;
 	-webkit-animation-name: moveBtn;
 	-webkit-animation-duration: 1s;
 	-webkit-animation-timing-function: ease-in;
-	-webkit-animation-delay: 2.5s;
+	-webkit-animation-delay: 2.6s;
 }
 
 @keyframes moveBtn {
@@ -324,7 +317,6 @@ span .btn {
 	75% {
 		transform:translateX(-10px);
 	}
-	
 	100% {
 		transform:translateX(0px);
 	}
@@ -345,6 +337,7 @@ span .btn {
 	position: absolute;
 }
 .btn:hover::after {
+	content: '';
 	top: 0;
 	left: 0;
 }
