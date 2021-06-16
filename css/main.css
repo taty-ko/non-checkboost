@@ -6,6 +6,11 @@ html {
 
 body {
 	margin: 0;
+	color: #000;
+	background: #fff;
+	font: 16px/1.2 "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -17,27 +22,6 @@ a:active,
 a:hover {
 	outline: 0;
 	text-decoration: none;
-}
-
-b,
-strong {
-	font-weight: bold;
-}
-
-sub,
-sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
-}
-
-sup {
-	top: -.5em;
-}
-
-sub {
-	bottom: -.25em;
 }
 
 html {
@@ -54,19 +38,10 @@ html {
 	max-height: 1000000px;
 }
 
-body {
-	color: #000;
-	background: #fff;
-	font: 16px/1.2 "Arial", "Helvetica Neue", "Helvetica", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
 img {
 	height: auto;
 	max-width: 100%;
 	vertical-align: top;
-	display: inline-block;
 }
 
 p {
@@ -78,7 +53,7 @@ a {
 	color: #000;
 }
 
-.wrapper {
+.ad {
 	width: 428px;
 	height: 320px;
 	display: inline-block;
@@ -124,13 +99,13 @@ a {
 	}
 } 
 
-.container {
-	position: absolute;
-	width: 100%;
-	height: 290px;
-	top: 15px;
-	left: 0;
-	margin-left: 15px;
+.run, .energy, .logo {
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;
 }
 
 .energy {
@@ -139,16 +114,11 @@ a {
 	height: 110px;
 	top: 90px;
 	left: 207px;
+	z-index: 1;
 	animation-name: moveEnergy;
-	animation-duration: 2s;
-	animation-timing-function: ease-in;
 	animation-delay: 0.1s;
-	animation-fill-mode: forwards;
 	-webkit-animation-name: moveEnergy;
-	-webkit-animation-duration: 2s;
-	-webkit-animation-timing-function: ease-in;
 	-webkit-animation-delay: 0.1s;
-	-webkit-animation-fill-mode: forwards;
 }
 
 @keyframes moveEnergy {
@@ -159,7 +129,7 @@ a {
 		transform:translateX(-10px);
 	}
 	75%{
-		transform:translateX(0px);
+		transform:translateX(0);
 	}
 	100% {
 		transform:translateX(-420px);
@@ -174,7 +144,7 @@ a {
 		transform:translateX(-10px);
 	}
 	75%{
-		transform:translateX(0px);
+		transform:translateX(0);
 	}
 	100% {
 		transform:translateX(-420px);
@@ -182,14 +152,11 @@ a {
 }
 
 .run {
+	position: absolute;
+	top: 15px;
+	z-index: 1;
 	animation-name: run;
-	animation-duration: 2s;
-	animation-timing-function: linear;
-	animation-fill-mode: forwards;
 	-webkit-animation-name: run;
-	-webkit-animation-duration: 2s;
-	-webkit-animation-timing-function: linear;
-	-webkit-animation-fill-mode: forwards;
 }
 
 @keyframes run {
@@ -206,6 +173,7 @@ a {
 		transform:translateX(-420px);
 	}
 }
+
 @-webkit-keyframes run {
 	0% {
 		transform:translateX(300px);
@@ -222,7 +190,7 @@ a {
 }
  
 .logo {
-	position: fixed;
+	position: absolute;
 	width: 70px;
 	height: 70px;
 	top: 245px;
@@ -230,13 +198,9 @@ a {
 	z-index: 1;
 	animation-name: logo;
 	animation-duration: 1s;
-	animation-timing-function: linear;
-	animation-fill-mode: forwards;
 	animation-delay: 2s;
 	-webkit-animation-name: logo;
 	-webkit-animation-duration: 1s;
-	-webkit-animation-timing-function: linear;
-	-webkit-animation-fill-mode: forwards;
 	-webkit-animation-delay: 2s;
 }
 
@@ -257,19 +221,23 @@ a {
 	}
 }
 
+.new, .ultraboost, .btn, .urban {
+	animation-duration: 1s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: backwards;
+	animation-delay: 2.6s;
+}
+
 .urban {
 	position: absolute;
-	top: 0;
+	top: 15px;
 	left: 230px;
+	z-index: 1;
 	animation-name: moveUrban;
 	animation-duration: 0.5s;
-	animation-timing-function: linear;
-    animation-fill-mode: backwards;
 	animation-delay: 2.5s;
 	-webkit-animation-name: moveUrban;
 	-webkit-animation-duration: 0.5s;
-	-webkit-animation-timing-function: linear;
-	-webkit-animation-fill-mode: backwards;
 	-webkit-animation-delay: 2.5s;
 }
 
@@ -278,10 +246,10 @@ a {
 		transform:translateX(200px);
 	}
 	75% {
-		transform:translateX(0px);
+		transform:translateX(0);
 	}
 	100% {
-		transform:translateX(0px);
+		transform:translateX(0);
 	}
 }
 @-webkit-keyframes moveUrban {
@@ -289,10 +257,10 @@ a {
 		transform:translateX(200px);	
 	}
 	75% {
-		transform:translateX(0px);
+		transform:translateX(0);
 	}
 	100% {
-		transform:translateX(0px);
+		transform:translateX(0);
 	}
 }
 
@@ -301,16 +269,9 @@ a {
     top: 50px;
     left: -35px;
     width: 210px;
+	z-index: 1;
 	animation-name: moveNew;
-	animation-duration: 1s;
-	animation-timing-function: ease-in;
-	animation-fill-mode: backwards;
-	animation-delay: 2.5s;
 	-webkit-animation-name: moveNew;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-timing-function: ease-in;
-	-webkit-animation-fill-mode: backwards;
-	-webkit-animation-delay: 2.5s;
 }
  
 @keyframes moveNew {
@@ -321,7 +282,7 @@ a {
 		transform:translateX(-10px);
 	}
 	100% {
-		transform:translateX(0px);
+		transform:translateX(0);
 	}
 }
 
@@ -333,7 +294,7 @@ a {
 		transform:translateX(-10px);
 	}
 	100% {
-		transform:translateX(0px);
+		transform:translateX(0);
 	}
 }
 
@@ -342,16 +303,9 @@ a {
 	top: 100px;
 	left: 10px;
 	width: 170px;	
+	z-index: 1;
 	animation-name: moveUltraboost;
-	animation-duration: 1s;
-	animation-timing-function: ease-in;
-	animation-fill-mode: backwards;
-	animation-delay: 2.5s;
-	-webkit-animation-name: moveUltraboost;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-timing-function: ease-in;
-	-webkit-animation-fill-mode: backwards;
-	-webkit-animation-delay: 2.5s;
+	-webkit-animation-name: moveUltraboost ;
 }
 
 @keyframes moveUltraboost {
@@ -363,7 +317,7 @@ a {
 	}
 	
 	100% {
-		transform:translateX(0px);
+		transform:translateX(0);
 	}
 }
 
@@ -376,27 +330,22 @@ a {
 	}
 	
 	100% {
-		transform:translateX(0px);
+		transform:translateX(0);
 	}
 }
 
-span .btn {
+.btn {
 	width: 125px;
 	height: 37px;
 	background-color: #000;
 	position: absolute;
 	top: 180px;
 	left: 10px;
+	z-index: 1;
 	animation-name: moveBtn;
-	animation-duration: 1s;
-	animation-timing-function: ease-in;
-	animation-fill-mode: backwards;
 	animation-delay: 2.6s;
-	-webkit-animation-name: moveBtn;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-timing-function: ease-in;
-	-webkit-animation-fill-mode: backwards;
-	-webkit-animation-delay: 2.6s;
+	-webkit-animation-name: moveBtn;;
+	-webkit-animation-delay: 2.6s; 
 }
 
 @keyframes moveBtn {
@@ -407,7 +356,7 @@ span .btn {
 		transform:translateX(-10px);
 	}
 	100% {
-		transform:translateX(0px);
+		transform:translateX(0);
 	}
 }
 
@@ -419,7 +368,7 @@ span .btn {
 		transform:translateX(-10px);
 	}
 	100% {
-		transform:translateX(0px);
+		transform:translateX(0);
 	}
 }
 
